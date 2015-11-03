@@ -5,12 +5,12 @@ lazyforward
 Simplify maintenance of NSE-SE pairs. Hypothetical `dplyr` example:
 
     #' @export
-    #' @name mutate
-    lazyforward::def("mutate")
-
-    #' @export
     #' @keywords internal
     mutate_ <- function (.data, ..., .dots) { UseMethod("mutate_") }
+
+    #' @export
+    #' @name mutate
+    mutate <- lazyforward::lazyforward("mutate_")
 
 The result:
 
