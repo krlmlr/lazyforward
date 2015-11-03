@@ -1,12 +1,15 @@
+Encoding: UTF-8
 Package: lazyforward
-Title: What the Package Does (one line, title case)
-Version: 0.0-0
+Title: Create Forwarders for "NSE-SE" Pairs
+Version: 0.0-1
 Authors@R: as.person("Kirill Müller <krlmlr+r@mailbox.org> [aut, cre]")
-Description: What the package does (one paragraph).
+Description: Simplifies the task of maintaining matching pairs of functions
+    that uses nonstandard and standard evaluation (with the help of the
+    lazyeval package).
 Depends:
     R (>= 3.2.2)
 License: GPL-3
 LazyData: true
-Encoding: UTF-8
-GitHub: https://github.com/krlmlr/
+GitHub: https://github.com/krlmlr/lazyforward
+GitHub: https://github.com/krlmlr/lazyforward/issues
 RoxygenNote: 5.0.0.9000
