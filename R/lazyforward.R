@@ -1,17 +1,21 @@
 #' Create forwarders for NSE-SE pairs
 #'
 #' @export
-lazyforward <- function(name, env = parent.frame()) {
+lazyforward <- function(name, env = parent.frame(), .dots = ".dots") {
   se <- get(name, env)
 
   f_se <- formals(se)
 
-  if (!all(c("...", ".dots") %in% names(f_se))) {
-    stop("The SE version needs to have ... and .dots arguments.")
+  if (!all(c(.dots) %in% names(f_se))) {
+    stop("The SE version needs to have a ", .dots, " argument.", call. = FALSE)
   }
-  f_nse <- f_se[names(f_se) != ".dots"]
+  f_nse <- f_se[names(f_se) != .dots]
+  if (all(names(f_nse) != "...")) {
+    f_nse <- c(f_nse, alist(...=))
+  }
 
   dot_fml <- list(.dots = quote(lazyeval::lazy_dots(...)))
+  names(dot_fml) <- .dots
   forward_fml <- setdiff(names(f_nse), "...")
   forward_fml <- setNames(lapply(forward_fml, as.symbol), forward_fml)
 
@@ -22,14 +26,4 @@ lazyforward <- function(name, env = parent.frame()) {
   formals(fun) <- f_nse
   environment(fun) <- env
   fun
-}
-
-#' @export
-def <- function(nse_name, se_name = paste0(nse_name, "_"), env = parent.frame())
-{
-  delayedAssign(nse_name, lazyforward(name = se_name, env = env), assign.env = env)
-  invisible(structure(NULL, class = "lazyforward_def"))
-}
-
-test_ <- function(..., .dots, a=5, b=3, c) {
 }

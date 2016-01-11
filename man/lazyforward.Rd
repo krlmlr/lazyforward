@@ -4,7 +4,7 @@
 \alias{lazyforward}
 \title{Create forwarders for NSE-SE pairs}
 \usage{
-lazyforward(name, env = parent.frame())
+lazyforward(name, env = parent.frame(), .dots = ".dots")
 }
 \description{
 Create forwarders for NSE-SE pairs
