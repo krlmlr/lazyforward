@@ -10,4 +10,5 @@ License: GPL-3
 LazyData: true
 URLNote: https://github.com/krlmlr/lazyforward
 BugReports: https://github.com/krlmlr/lazyforward/issues
+Imports: testthat
 RoxygenNote: 5.0.1.9000
