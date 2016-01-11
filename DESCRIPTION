@@ -8,6 +8,6 @@ Description: Simplifies the task of maintaining matching pairs of functions
     lazyeval package).
 License: GPL-3
 LazyData: true
-GitHub: https://github.com/krlmlr/lazyforward
-GitHub: https://github.com/krlmlr/lazyforward/issues
-RoxygenNote: 5.0.0.9000
+URLNote: https://github.com/krlmlr/lazyforward
+BugReports: https://github.com/krlmlr/lazyforward/issues
+RoxygenNote: 5.0.1.9000
