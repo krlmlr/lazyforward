@@ -6,6 +6,9 @@
 #'
 #' @export
 expect_lazyforward <- function(nse, se = paste0(nse, "_"), env = parent.frame(), .dots = ".dots") {
+  # Used in a closure, need to fix value beforehand
+  force(env)
+
   formals <- function(name) {
     base::formals(get(name, env, mode = "function"))
   }
