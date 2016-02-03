@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# lazyforward [![wercker status](https://app.wercker.com/status/36c110c0cc966dfb16c8a5ed88c0c62c/s/master "wercker status")](https://app.wercker.com/project/bykey/36c110c0cc966dfb16c8a5ed88c0c62c) [![codecov.io](https://codecov.io/github/user/repo/coverage.svg?branch=master)](https://codecov.io/github/user/repo?branch=master)
+# lazyforward [![wercker status](https://app.wercker.com/status/36c110c0cc966dfb16c8a5ed88c0c62c/s/master "wercker status")](https://app.wercker.com/project/bykey/36c110c0cc966dfb16c8a5ed88c0c62c) [![codecov.io](https://codecov.io/github/krlmlr/lazyforward/coverage.svg?branch=master)](https://codecov.io/github/krlmlr/lazyforward?branch=master)
 
 Simplify maintenance of NSE-SE pairs. Hypothetical `dplyr` example:
 
