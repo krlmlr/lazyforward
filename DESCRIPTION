@@ -2,15 +2,15 @@ Encoding: UTF-8
 Package: lazyforward
 Title: Create Forwarders for "NSE-SE" Pairs
 Version: 0.0-2
-Authors@R: as.person("Kirill Müller <krlmlr+r@mailbox.org> [aut, cre]")
+Authors@R: person("Kirill", "Müller", role = c("ctb", "cre"), email = "krlmlr+r@mailbox.org")
 Description: Simplifies the task of maintaining matching pairs of
     functions that uses nonstandard and standard evaluation (with
     the help of the lazyeval package).
 License: GPL-3
 LazyData: true
+URL: http://krlmlr.github.io/lazyforward
 URLNote: https://github.com/krlmlr/lazyforward
 BugReports: https://github.com/krlmlr/lazyforward/issues
 Imports:
     testthat
-Suggests: testthat
 RoxygenNote: 5.0.1
