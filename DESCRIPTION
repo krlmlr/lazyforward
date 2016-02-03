@@ -2,7 +2,7 @@ Encoding: UTF-8
 Package: lazyforward
 Title: Create Forwarders for "NSE-SE" Pairs
 Version: 0.0-2
-Authors@R: as.person("Kirill Müller <krlmlr+r@mailbox.org> [aut, cre]")
+Authors@R: person("Kirill", "Müller", role = c("ctb", "cre"), email = "krlmlr+r@mailbox.org")
 Description: Simplifies the task of maintaining matching pairs of
     functions that uses nonstandard and standard evaluation (with
     the help of the lazyeval package).
