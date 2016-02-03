@@ -22,7 +22,10 @@ lazyforward <- function(se_name, env = parent.frame(), .dots = ".dots") {
     f_nse <- c(f_nse, alist(...=))
   }
 
-  dot_fml <- list(.dots = quote(lazyeval::lazy_dots(...)))
+  # Set .dots to lazyeval::lazy_dots(...)
+  # Necessary to avoid bogus warning from R CMD check
+  dot_fml <- list(.dots = as.call(list(
+    call("::", quote(lazyeval), quote(lazy_dots)), quote(...))))
   names(dot_fml) <- .dots
   forward_fml <- setdiff(names(f_nse), "...")
   forward_fml <- setNames(lapply(forward_fml, as.symbol), forward_fml)
