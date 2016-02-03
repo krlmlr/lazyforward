@@ -11,6 +11,21 @@
 #' @seealso \code{\link{lazyforward}}
 #'
 #' @export
+#' @examples
+#' amazing_ <- function(input, args, .dots) {
+#'   amaze_me(.dots, input, args)
+#' }
+#' amazing <- function(..., input, args) {
+#'   amazing(.dots = lazyeval::lazy_dots(...), input, args)
+#' }
+#' library(testthat)
+#' with_reporter(
+#'   "summary",
+#'   test_that(
+#'     "mutate forwarder is implemented correctly",
+#'     expect_lazyforward("mutate", env = asNamespace("dplyr"))
+#'   )
+#' )
 expect_lazyforward <- function(nse_name, se_name = paste0(nse_name, "_"),
                                env = parent.frame(), .dots = ".dots") {
   # Used in a closure, need to fix value beforehand

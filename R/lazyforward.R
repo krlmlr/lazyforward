@@ -9,6 +9,11 @@
 #' @param .dots The name of the \code{.dots} argument, default: \code{".dots"}
 #'
 #' @export
+#' @examples
+#' amazing_ <- function(input, args, .dots) {
+#'   amaze_me(.dots, input, args)
+#' }
+#' lazyforward("amazing_")
 lazyforward <- function(se_name, env = parent.frame(), .dots = ".dots") {
   se <- get(se_name, env)
 
