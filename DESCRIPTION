@@ -8,6 +8,7 @@ Description: Simplifies the task of maintaining matching pairs of
     the help of the lazyeval package).
 License: GPL-3
 LazyData: true
+URL: https://krlmlr.github.io/lazyforward
 URLNote: https://github.com/krlmlr/lazyforward
 BugReports: https://github.com/krlmlr/lazyforward/issues
 Imports:
