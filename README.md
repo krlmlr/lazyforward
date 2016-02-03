@@ -29,3 +29,13 @@ dplyr::mutate
 ```
 
 The difference: You don't need to remember updating the interface and the forwarding logic if the interface of the SE version changes.
+
+If the forwarding logic has been already written by hand, it may be simpler just to verify that it is correct:
+
+``` r
+testthat::test_that(
+  "mutate forwarder is implemented correctly",
+  lazyforward::expect_lazyforward("mutate", env = asNamespace("dplyr"))
+)
+#> ...
+```
