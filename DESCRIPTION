@@ -4,11 +4,12 @@ Title: Create Forwarders for "NSE-SE" Pairs
 Version: 0.0-2
 Authors@R: as.person("Kirill Müller <krlmlr+r@mailbox.org> [aut, cre]")
 Description: Simplifies the task of maintaining matching pairs of
-        functions that uses nonstandard and standard evaluation (with
-        the help of the lazyeval package).
+    functions that uses nonstandard and standard evaluation (with
+    the help of the lazyeval package).
 License: GPL-3
 LazyData: true
 URLNote: https://github.com/krlmlr/lazyforward
 BugReports: https://github.com/krlmlr/lazyforward/issues
-Imports: testthat
-RoxygenNote: 5.0.1.9000
+Imports:
+    testthat
+RoxygenNote: 5.0.1
