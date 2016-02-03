@@ -13,4 +13,5 @@ URLNote: https://github.com/krlmlr/lazyforward
 BugReports: https://github.com/krlmlr/lazyforward/issues
 Imports:
     testthat
+Suggests: lazyeval
 RoxygenNote: 5.0.1
