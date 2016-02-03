@@ -5,7 +5,7 @@ autoroxy::rox_on()
 library(magrittr)
 
 repo <- git2r::repository()
-branch_name <- (git2r::branches(repo) %>% Filter(git2r::is_head, .) %>% extract2(1))@name
+branch_name <- (git2r::branches(repo) %>% Filter(git2r::is_head, .) %>% "[["(1))@name
 version <- gsub("^.*/([^/]*)$", "\\1", branch_name)
 package_version(version)
 date <- as.character(Sys.Date())
@@ -25,7 +25,7 @@ master <- Reduce(c, git2r::config())$gitflow.branch.master
 if (is.null(master)) {
   warning("Config option gitflow.branch.master not set, are you running git flow?")
 } else {
-  changes_since_master <- system(paste0('git log $(git rev-list --first-parent ', master, '.. | tail -n 1).. --format=format:"%b" | sed "/^$/d"'), intern=TRUE)
+  changes_since_master <- system(paste0('git show -s $(git rev-list --first-parent ', master, '.. | head -n -1) --format=format:"%b" | sed "/^$/d"'), intern=TRUE)
 
   news <- character()
   news <- readLines("NEWS.md")
